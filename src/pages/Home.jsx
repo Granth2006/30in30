@@ -16,11 +16,11 @@ export default function Home() {
         <header className="catalog-topbar">
           <a href="/" className="catalog-brand" aria-label="30in30 home">
             <span className="catalog-brand__mark">
-              <Sparkles size={18} />
+              <img src="/favicon.png" alt="30in30 Logo" style={{ width: 36, height: 36, borderRadius: 12 }} />
             </span>
             <span className="catalog-brand__text">
               <strong>30in30</strong>
-              <span>tool gallery</span>
+              <span>challenge</span>
             </span>
           </a>
 
@@ -34,11 +34,11 @@ export default function Home() {
         <main className="catalog-main">
           <section className="catalog-hero">
             <div className="catalog-hero__content">
-              <p className="catalog-eyebrow">30 projects. One clean showcase.</p>
-              <h1>Developer tools presented like products, not placeholders.</h1>
+              <p className="catalog-eyebrow">30 Web Apps in 30 Days Challenge</p>
+              <h1>Building a new web app every single day.</h1>
               <p className="catalog-hero__copy">
-                Browse the collection through a calmer interface with stronger filters,
-                clearer cards, and less visual noise.
+                Hey, I'm Granth Kumar! I built this project to challenge myself to create 30 web apps in 30 days. 
+                Explore the collection below to see what I've been working on.
               </p>
 
               <div className="catalog-hero__stats" aria-label="Project statistics">
@@ -116,7 +116,7 @@ export default function Home() {
         <footer className="catalog-footer">
           <div>
             <strong>30in30</strong>
-            <p>A sharper browsing experience for the full tool collection.</p>
+            <p>Developed with ❤️ by Granth Kumar for the 30 Web Apps in 30 Days challenge.</p>
           </div>
           <a href="/admin" className="catalog-footer__link">
             Open admin
