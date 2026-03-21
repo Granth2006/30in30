@@ -44,12 +44,18 @@ export function ProjectsProvider({ children }) {
     }
   };
 
-  // Filter projects based on search and category
+  // Filter and sort projects based on search, category, and Day number
   const filteredProjects = projects.filter(project => {
     const matchesSearch = project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'All' || project.category === selectedCategory;
     return matchesSearch && matchesCategory;
+  }).sort((a, b) => {
+    const getDayNumber = (name) => {
+      const match = name.match(/Day\s+(\d+)/i);
+      return match ? parseInt(match[1], 10) : 999; // Items without a day go to the end
+    };
+    return getDayNumber(a.name) - getDayNumber(b.name);
   });
 
   // Add new project
