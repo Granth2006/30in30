@@ -295,7 +295,13 @@ export default function Admin() {
   const filteredProjects = projects.filter(p => 
     p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     p.category.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  ).sort((a, b) => {
+    const getDayNumber = (name) => {
+      const match = name.match(/Day\s+(\d+)/i);
+      return match ? parseInt(match[1], 10) : 999;
+    };
+    return getDayNumber(a.name) - getDayNumber(b.name);
+  });
 
   if (!isAuthenticated) {
     return <LoginScreen onLogin={handleLogin} />;
