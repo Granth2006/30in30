@@ -1,4 +1,14 @@
 {
+  "redirects": [
+    {
+      "source": "/pdftoolkit",
+      "destination": "/pdftoolkit/"
+    },
+    {
+      "source": "/qrcodescanner",
+      "destination": "/qrcodescanner/"
+    }
+  ],
   "rewrites": [
     {
       "source": "/pdftoolkit/:path*",
