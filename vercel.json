@@ -1,31 +1,5 @@
 {
-  "redirects": [
-    {
-      "source": "/pdftoolkit",
-      "destination": "/pdftoolkit/"
-    },
-    {
-      "source": "/qrcodescanner",
-      "destination": "/qrcodescanner/"
-    }
-  ],
   "rewrites": [
-    {
-      "source": "/pdftoolkit/:path*",
-      "destination": "https://pdf-toolkit-30in30.vercel.app/:path*"
-    },
-    {
-      "source": "/pdftoolkit",
-      "destination": "https://pdf-toolkit-30in30.vercel.app/"
-    },
-    {
-      "source": "/qrcodescanner/:path*",
-      "destination": "https://qrcode-generator-30in30.vercel.app/:path*"
-    },
-    {
-      "source": "/qrcodescanner",
-      "destination": "https://qrcode-generator-30in30.vercel.app/"
-    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
